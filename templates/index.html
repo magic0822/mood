@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <h1>Mood List</h1>
+    <p>{{moods | tojson}}</p>
+    <p>Length of streak: {{streak_len}}</p>
+    <p>Streak Percentage: {{percentage}}</p>
+    <form action="/mood" method="post">
+        <label for="mood">Current mood</label>
+    <input type="text" name="mood">
+        <button>Add a mood</button>
+    </form>
+</body>
+</html>

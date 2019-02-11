@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+{% block body %}
+{% if session['logged_in'] %}
+
+You're logged in already.
+
+{% else %}
+<form action="/login" method="post">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button type="submit">Sign in</button>
+</form>
+{% endif %}
+{% endblock %}
+</body>
+</html>
